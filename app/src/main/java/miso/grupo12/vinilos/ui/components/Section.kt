@@ -16,12 +16,9 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import miso.grupo12.vinilos.data.SectionInfo
-import miso.grupo12.vinilos.ui.common.LocalNavigator
 
 @Composable
 fun Section(section: SectionInfo, details: () -> Unit) {
-
-    val route = LocalNavigator.current
 
     Row(
         modifier = Modifier
