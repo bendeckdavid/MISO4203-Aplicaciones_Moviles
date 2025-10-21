@@ -58,4 +58,8 @@ dependencies {
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
+    implementation(libs.androidx.compose.material.icons.extended) // Icons
+    implementation(libs.coil.compose) // Images
+    implementation(libs.androidx.navigation.compose) // Navigation
+    implementation(libs.androidx.material3) // Beta Version
 }
