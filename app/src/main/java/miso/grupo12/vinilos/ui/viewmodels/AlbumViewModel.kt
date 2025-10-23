@@ -1,13 +1,13 @@
-package miso.grupo12.vinilos.ui.screens.albums
+package miso.grupo12.vinilos.ui.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
+import miso.grupo12.vinilos.data.api.RetrofitInstance
 import miso.grupo12.vinilos.data.models.Album
 import miso.grupo12.vinilos.data.repository.AlbumRepository
-import miso.grupo12.vinilos.data.api.RetrofitInstance
 
 class AlbumViewModel : ViewModel() {
 
@@ -23,10 +23,7 @@ class AlbumViewModel : ViewModel() {
         viewModelScope.launch {
             try {
                 _albums.value = repository.getAlbums()
-                println("✅ Albums descargados: ${_albums.value.size}")
-                //_albums.value = result
             } catch (e: Exception) {
-                println("❌ Error al obtener álbumes: ${e.message}")
                 e.printStackTrace()
             }
         }

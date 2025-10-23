@@ -6,12 +6,11 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import miso.grupo12.vinilos.data.MockData
 import miso.grupo12.vinilos.ui.components.AddButton
 import miso.grupo12.vinilos.ui.components.SectionList
 import androidx.lifecycle.viewmodel.compose.viewModel
 import miso.grupo12.vinilos.data.SectionInfo
-import miso.grupo12.vinilos.ui.components.Section
+import miso.grupo12.vinilos.ui.viewmodels.AlbumViewModel
 
 @Composable
 fun AlbumsScreen(viewModel: AlbumViewModel = viewModel()) {

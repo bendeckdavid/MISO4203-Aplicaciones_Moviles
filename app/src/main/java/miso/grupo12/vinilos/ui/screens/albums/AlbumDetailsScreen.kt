@@ -14,6 +14,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import miso.grupo12.vinilos.data.SectionInfo
 import miso.grupo12.vinilos.data.models.Album
 import miso.grupo12.vinilos.ui.components.SectionDetails
+import miso.grupo12.vinilos.ui.viewmodels.AlbumViewModel
 
 @Composable
 fun AlbumDetailsScreen(albumId: String,
