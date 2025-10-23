@@ -62,4 +62,13 @@ dependencies {
     implementation(libs.coil.compose) // Images
     implementation(libs.androidx.navigation.compose) // Navigation
     implementation(libs.androidx.material3) // Beta Version
+
+    // Retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.11.0")
+
+    // Converter (por ejemplo, para JSON con Gson)
+    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
+
+    // (Opcional) Logging para ver las peticiones
+    implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
 }

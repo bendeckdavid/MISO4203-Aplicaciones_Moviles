@@ -17,7 +17,7 @@ import androidx.compose.material.icons.filled.Person
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
-import miso.grupo12.vinilos.ui.screens.AlbumsScreen
+import miso.grupo12.vinilos.ui.screens.albums.AlbumsScreen
 import miso.grupo12.vinilos.ui.screens.ArtistsScreen
 import miso.grupo12.vinilos.ui.screens.SongsScreen
 
