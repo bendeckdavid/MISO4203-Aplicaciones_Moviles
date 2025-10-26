@@ -74,7 +74,7 @@ Usa la IP especial `10.0.2.2` para acceder desde el emulador Android.
 
 ```kotlin
 object RetrofitInstance {
-    private const val BASE_URL = "http://10.0.2.2:3000/"
+    private const val BASE_URL = "https://moviles.codezor.dev/"  /// servidor que aloja la API
 }
 ```
 
@@ -108,6 +108,7 @@ Desde **Android Studio**:
 
 ---
 ### 🗂️ Estructura del proyecto
+```plaintext
 vinilos-app/
 ├── app/
 │   ├── src/main/
@@ -124,6 +125,7 @@ vinilos-app/
 │   └── build.gradle
 ├── README.md
 └── wiki/
+```
 
 ---
 ### 🧱 GitFlow y ramas del proyecto
