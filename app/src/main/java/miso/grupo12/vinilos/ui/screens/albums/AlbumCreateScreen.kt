@@ -1,4 +1,4 @@
-package miso.grupo12.vinilos.ui.screens
+package miso.grupo12.vinilos.ui.screens.albums
 
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
