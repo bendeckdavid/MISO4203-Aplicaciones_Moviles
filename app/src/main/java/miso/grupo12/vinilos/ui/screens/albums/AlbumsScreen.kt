@@ -6,6 +6,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import miso.grupo12.vinilos.ui.components.AddButton
 import miso.grupo12.vinilos.ui.components.SectionList
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -35,7 +36,7 @@ fun AlbumsScreen(viewModel: AlbumViewModel = viewModel()) {
                         .padding(innerPadding),
                     contentAlignment = Alignment.Center
                 ) {
-                    CircularProgressIndicator()
+                    CircularProgressIndicator( modifier = Modifier.testTag("progress_indicator"))
                 }
             }
 

@@ -29,6 +29,17 @@ android {
             )
         }
     }
+
+    packaging {
+        resources {
+            excludes += setOf(
+                "META-INF/LICENSE.md",
+                "META-INF/LICENSE-notice.md",
+                "META-INF/NOTICE.md"
+            )
+        }
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
@@ -51,24 +62,36 @@ dependencies {
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
     implementation(libs.androidx.compose.material3.adaptive.navigation.suite)
+    implementation(libs.androidx.compose.material.icons.extended) // Icons
+    implementation(libs.androidx.material3) // Beta Version
+
+// Imágenes y Navegación
+    implementation(libs.coil.compose) // Images
+    implementation(libs.androidx.navigation.compose) // Navigation
+
+// Retrofit para API REST
+    implementation("com.squareup.retrofit2:retrofit:2.11.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
+
+// ========================================
+// TESTS UNITARIOS (carpeta test/)
+// ========================================
     testImplementation(libs.junit)
+    testImplementation("io.mockk:mockk:1.13.8")
+
+// ========================================
+// TESTS INSTRUMENTADOS (carpeta androidTest/)
+// ========================================
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
+    androidTestImplementation("io.mockk:mockk-android:1.13.8")
+
+// ========================================
+// DEBUG (para visualizar tests de UI)
+// ========================================
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
-    implementation(libs.androidx.compose.material.icons.extended) // Icons
-    implementation(libs.coil.compose) // Images
-    implementation(libs.androidx.navigation.compose) // Navigation
-    implementation(libs.androidx.material3) // Beta Version
-
-    // Retrofit
-    implementation("com.squareup.retrofit2:retrofit:2.11.0")
-
-    // Converter (por ejemplo, para JSON con Gson)
-    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
-
-    // (Opcional) Logging para ver las peticiones
-    implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
 }

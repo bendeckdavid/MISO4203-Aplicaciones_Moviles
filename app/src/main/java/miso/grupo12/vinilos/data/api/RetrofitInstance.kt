@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitInstance {
 
-    private const val BASE_URL = "http://10.0.2.2:3000/" //  http://10.0.2.2:3000/  para hacer llamado a localhost del PC
+    private const val BASE_URL = "https://moviles.codezor.dev/" //  http://10.0.2.2:3000/  para hacer llamado a localhost del PC
 
     val albumService: AlbumService by lazy {
         Retrofit.Builder()

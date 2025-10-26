@@ -6,6 +6,8 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import miso.grupo12.vinilos.ui.common.LocalNavigator
 
 @Composable
@@ -15,7 +17,8 @@ fun AddButton(route: String) {
     FloatingActionButton(
         onClick = { router.navigate(route) },
         containerColor = MaterialTheme.colorScheme.primaryContainer,
-        contentColor = MaterialTheme.colorScheme.onPrimaryContainer
+        contentColor = MaterialTheme.colorScheme.onPrimaryContainer,
+        modifier = Modifier.testTag(route)
     ) {
         Icon(
             imageVector = Icons.Filled.Add,
