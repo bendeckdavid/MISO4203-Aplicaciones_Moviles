@@ -1,4 +1,4 @@
-package miso.grupo12.vinilos.ui.screens
+package miso.grupo12.vinilos.ui.screens.artists
 
 import androidx.compose.runtime.Composable
 import androidx.compose.foundation.layout.fillMaxSize
@@ -10,15 +10,15 @@ import miso.grupo12.vinilos.ui.components.AddButton
 import miso.grupo12.vinilos.ui.components.SectionList
 
 @Composable
-fun SongsScreen() {
+fun ArtistsScreen() {
     Scaffold(
         modifier = Modifier.fillMaxSize(),
-        floatingActionButton = { AddButton("song_create") }
+        floatingActionButton = { AddButton("artist_create") }
     ) { innerPadding ->
         SectionList(
-            title = "Listado de Canciones",
-            route = "song",
-            sections = MockData.songs,
+            title = "Listado de Artistas",
+            route = "artist",
+            sections = MockData.artists,
             modifier = Modifier.padding(innerPadding)
         )
     }

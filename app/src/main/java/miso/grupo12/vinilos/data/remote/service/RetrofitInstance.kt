@@ -1,4 +1,4 @@
-package miso.grupo12.vinilos.data.api
+package miso.grupo12.vinilos.data.remote.service
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

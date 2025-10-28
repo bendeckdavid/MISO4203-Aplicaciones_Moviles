@@ -8,11 +8,11 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import miso.grupo12.vinilos.ui.screens.albums.AlbumCreateScreen
-import miso.grupo12.vinilos.ui.screens.ArtistCreateScreen
-import miso.grupo12.vinilos.ui.screens.SongCreateScreen
+import miso.grupo12.vinilos.ui.screens.artists.ArtistCreateScreen
+import miso.grupo12.vinilos.ui.screens.songs.SongCreateScreen
 import miso.grupo12.vinilos.ui.screens.albums.AlbumDetailsScreen
-import miso.grupo12.vinilos.ui.screens.ArtistDetailsScreen
-import miso.grupo12.vinilos.ui.screens.SongDetailsScreen
+import miso.grupo12.vinilos.ui.screens.artists.ArtistDetailsScreen
+import miso.grupo12.vinilos.ui.screens.songs.SongDetailsScreen
 import miso.grupo12.vinilos.ui.theme.slideInLeft
 import miso.grupo12.vinilos.ui.theme.slideOutLeft
 

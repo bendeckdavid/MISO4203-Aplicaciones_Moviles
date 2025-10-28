@@ -1,4 +1,4 @@
-package miso.grupo12.vinilos.ui.screens
+package miso.grupo12.vinilos.ui.screens.songs
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue

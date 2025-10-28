@@ -10,22 +10,27 @@ import androidx.compose.material3.Text
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.hilt.navigation.compose.hiltViewModel
 import miso.grupo12.vinilos.data.SectionInfo
-import miso.grupo12.vinilos.data.models.Album
+import miso.grupo12.vinilos.data.local.relations.AlbumComplete
+import miso.grupo12.vinilos.data.remote.models.Album
 import miso.grupo12.vinilos.ui.components.SectionDetails
 import miso.grupo12.vinilos.ui.viewmodels.AlbumViewModel
 
 @Composable
 fun AlbumDetailsScreen(albumId: String,
-                       viewModel: AlbumViewModel = viewModel()) {
+                       viewModel: AlbumViewModel = hiltViewModel()
+) {
+
+    val albumComplete by viewModel.selectedAlbum.collectAsState()
+
     //val comments = MockData.comments.shuffled().take(4)
-    val album by viewModel.selectedAlbum.collectAsState()
+   // val album by viewModel.selectedAlbum.collectAsState()
     LaunchedEffect(albumId) {
-        viewModel.loadAlbumById(albumId.toInt())
+        viewModel.selectAlbumDetails(albumId.toInt())
     }
 
-    if (album == null) {
+    if (albumComplete == null) {
         // Pantalla de carga
         Box(
             Modifier.fillMaxSize(),
@@ -34,12 +39,17 @@ fun AlbumDetailsScreen(albumId: String,
             CircularProgressIndicator()
         }
     } else {
-        AlbumDetailContent(album!!)
+        AlbumDetailContent(albumComplete!!)
     }
 }
 
 @Composable
-fun AlbumDetailContent(album: Album) {
+fun AlbumDetailContent(albumComplete: AlbumComplete) {
+
+    val album = albumComplete.album
+    val comments = albumComplete.comments
+    val tracks = albumComplete.tracks
+    val performers = albumComplete.performers
 
     val albumDetail = SectionInfo(
         id = album.id.toString(),
@@ -57,15 +67,40 @@ fun AlbumDetailContent(album: Album) {
             horizontalAlignment = Alignment.Start,
             verticalArrangement = Arrangement.spacedBy(20.dp),
         ) {
+
+            // --- Secciones adicionales (Pistas y Artistas) ---
+
+            // 1. Artistas/Performers
+            Text(text = "Artistas", style = MaterialTheme.typography.titleMedium)
+            Text(
+                text = performers.joinToString { it.name },
+                style = MaterialTheme.typography.bodyMedium
+            )
+
+            // 2. Tracks/Pistas
+            Text(text = "Pistas", style = MaterialTheme.typography.titleMedium)
+            if (tracks.isEmpty()) {
+                Text("Este álbum no tiene pistas listadas.")
+            } else {
+                tracks.forEach { track ->
+                    Text(
+                        text = "🎶 ${track.name} (${track.duration})",
+                        style = MaterialTheme.typography.bodyMedium
+                    )
+                }
+            }
+
+            // --- Sección de Comentarios (Tu código original modificado) ---
+
             Text(
                 text = "Comentarios",
                 style = MaterialTheme.typography.titleMedium
             )
 
-            if (album.comments.isEmpty()) {
+            if (comments.isEmpty()) {
                 Text("Este álbum aún no tiene comentarios.")
             } else {
-                album.comments.forEach { comment ->
+                comments.forEach { comment -> // Iterar sobre la lista de CommentEntity
                     Column(
                         verticalArrangement = Arrangement.spacedBy(6.dp),
                         modifier = Modifier.padding(bottom = 10.dp)

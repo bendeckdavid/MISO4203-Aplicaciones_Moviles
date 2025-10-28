@@ -12,16 +12,15 @@ import miso.grupo12.vinilos.ui.components.SectionList
 import androidx.lifecycle.viewmodel.compose.viewModel
 import miso.grupo12.vinilos.data.SectionInfo
 import miso.grupo12.vinilos.ui.viewmodels.AlbumViewModel
+import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import miso.grupo12.vinilos.data.local.entities.AlbumEntity
 
 @Composable
-fun AlbumsScreen(viewModel: AlbumViewModel = viewModel()) {
+fun AlbumsScreen(viewModel: AlbumViewModel = hiltViewModel()) {
 
-    val albums by viewModel.albums.collectAsState()
-
-    // Cargar datos una sola vez al crear la pantalla
-    LaunchedEffect(Unit) {
-        viewModel.loadAlbums()
-    }
+   // val albums by viewModel.albums.collectAsState()
+    val albums: List<AlbumEntity> by viewModel.albums.collectAsStateWithLifecycle()
 
     Scaffold(
         modifier = Modifier.fillMaxSize(),

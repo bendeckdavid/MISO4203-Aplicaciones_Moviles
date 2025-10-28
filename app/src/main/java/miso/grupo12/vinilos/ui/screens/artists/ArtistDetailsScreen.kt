@@ -1,4 +1,4 @@
-package miso.grupo12.vinilos.ui.screens
+package miso.grupo12.vinilos.ui.screens.artists
 
 import androidx.compose.runtime.Composable
 import miso.grupo12.vinilos.data.MockData

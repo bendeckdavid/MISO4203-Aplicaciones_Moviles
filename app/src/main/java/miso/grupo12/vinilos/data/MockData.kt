@@ -1,5 +1,7 @@
 package miso.grupo12.vinilos.data
 
+import miso.grupo12.vinilos.data.remote.models.Comment
+
 object MockData {
 
     val albums = listOf(
@@ -132,26 +134,107 @@ object MockData {
     )
 
     val comments = listOf(
-        Comment(id = "1", authorName = "David Gutierrez", comment = "Este álbum es una obra maestra, cada canción me transporta a un universo distinto."),
-        Comment(id = "2", authorName = "Andrea Salcedo", comment = "El estilo es interesante, aunque algunas pistas suenan un poco repetitivas."),
-        Comment(id = "3", authorName = "Carlos Mendoza", comment = "Excelente producción musical, las letras son profundas y emotivas."),
-        Comment(id = "4", authorName = "María López", comment = "Una joya del género, la fusión de estilos está perfectamente lograda."),
-        Comment(id = "5", authorName = "Roberto Díaz", comment = "Esperaba más del artista, el álbum carece de la energía de sus trabajos anteriores."),
-        Comment(id = "6", authorName = "Patricia Rojas", comment = "Me encantó la atmósfera que crea, ideal para escuchar en momentos de reflexión."),
-        Comment(id = "7", authorName = "Juan Martínez", comment = "La instrumentación es increíble, pero siento que le falta cohesión entre las canciones."),
-        Comment(id = "8", authorName = "Sofía Hernández", comment = "Definitivamente uno de los mejores lanzamientos del año, no puedo dejar de escucharlo."),
-        Comment(id = "9", authorName = "Miguel Ángel Torres", comment = "Los arreglos orquestales le dan una dimensión completamente nueva a la propuesta musical."),
-        Comment(id = "10", authorName = "Laura Ramírez", comment = "Me decepcionó un poco, las canciones suenan muy similares entre sí."),
-        Comment(id = "11", authorName = "Fernando Castillo", comment = "La voz del artista se complementa perfectamente con la producción minimalista."),
-        Comment(id = "12", authorName = "Valentina Morales", comment = "Un trabajo experimental que desafía las convenciones del género, muy refrescante."),
-        Comment(id = "13", authorName = "Diego Silva", comment = "Las letras son poéticas y profundas, cada canción cuenta una historia fascinante."),
-        Comment(id = "14", authorName = "Camila Vargas", comment = "No logró conectar conmigo, esperaba algo más innovador del artista."),
-        Comment(id = "15", authorName = "Andrés Jiménez", comment = "La mezcla de géneros es audaz y funciona sorprendentemente bien en cada tema."),
-        Comment(id = "16", authorName = "Isabella Cruz", comment = "Simplemente perfecto, cada detalle está cuidadosamente pensado y ejecutado."),
-        Comment(id = "17", authorName = "Gabriel Sánchez", comment = "La segunda mitad del álbum pierde fuerza, pero las primeras canciones son brillantes."),
-        Comment(id = "18", authorName = "Natalia Ortiz", comment = "Un viaje emocional de principio a fin, logra transmitir sentimientos muy genuinos."),
-        Comment(id = "19", authorName = "Ricardo Pérez", comment = "Buen álbum, aunque siento que no aporta nada nuevo al panorama musical actual."),
-        Comment(id = "20", authorName = "Daniela Romero", comment = "La producción es impecable y las melodías se quedan en tu cabeza por días.")
+        Comment(
+            id = 1,
+            description = "David Gutierrez",
+            rating = 5
+        ),
+        Comment(
+            id = 2,
+            description = "El estilo es interesante, aunque algunas pistas suenan un poco repetitivas.",
+            rating = 3
+        ),
+        Comment(
+            id = 3,
+            description = "Excelente producción musical, las letras son profundas y emotivas.",
+            rating = 5
+        ),
+        Comment(
+            id = 4,
+            description = "Una joya del género, la fusión de estilos está perfectamente lograda.",
+            rating = 4
+        ),
+        Comment(
+            id = 5,
+            description = "Esperaba más del artista, el álbum carece de la energía de sus trabajos anteriores.",
+            rating = 2
+        ),
+        Comment(
+            id = 6,
+            description = "Me encantó la atmósfera que crea, ideal para escuchar en momentos de reflexión.",
+            rating = 5
+        ),
+        Comment(
+            id = 7,
+            description = "La instrumentación es increíble, pero siento que le falta cohesión entre las canciones.",
+            rating = 3
+        ),
+        Comment(
+            id = 8,
+            description = "Definitivamente uno de los mejores lanzamientos del año, no puedo dejar de escucharlo.",
+            rating = 5
+        ),
+        Comment(
+            id = 9,
+            description = "Los arreglos orquestales le dan una dimensión completamente nueva a la propuesta musical.",
+            rating = 4
+        ),
+        Comment(
+            id = 10,
+            description = "Me decepcionó un poco, las canciones suenan muy similares entre sí.",
+            rating = 2
+        ),
+        Comment(
+            id = 11,
+            description = "La voz del artista se complementa perfectamente con la producción minimalista.",
+            rating = 5
+        ),
+        Comment(
+            id = 12,
+            description = "Un trabajo experimental que desafía las convenciones del género, muy refrescante.",
+            rating = 4
+        ),
+        Comment(
+            id = 13,
+            description = "Las letras son poéticas y profundas, cada canción cuenta una historia fascinante.",
+            rating = 5
+        ),
+        Comment(
+            id = 14,
+            description = "No logró conectar conmigo, esperaba algo más innovador del artista.",
+            rating = 2
+        ),
+        Comment(
+            id = 15,
+            description = "La mezcla de géneros es audaz y funciona sorprendentemente bien en cada tema.",
+            rating = 4
+        ),
+        Comment(
+            id = 16,
+            description = "Simplemente perfecto, cada detalle está cuidadosamente pensado y ejecutado.",
+            rating = 5
+        ),
+        Comment(
+            id = 17,
+            description = "La segunda mitad del álbum pierde fuerza, pero las primeras canciones son brillantes.",
+            rating = 3
+        ),
+        Comment(
+            id = 18,
+            description = "Un viaje emocional de principio a fin, logra transmitir sentimientos muy genuinos.",
+            rating = 5
+        ),
+        Comment(
+            id = 19,
+            description = "Buen álbum, aunque siento que no aporta nada nuevo al panorama musical actual.",
+            rating = 3
+        ),
+        Comment(
+            id = 20,
+            description = "La producción es impecable y las melodías se quedan en tu cabeza por días.",
+            rating = 5
+        )
     )
+
 
 }

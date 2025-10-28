@@ -1,6 +1,6 @@
-package miso.grupo12.vinilos.data.api
+package miso.grupo12.vinilos.data.remote.service
 
-import miso.grupo12.vinilos.data.models.Album
+import miso.grupo12.vinilos.data.remote.models.Album
 import retrofit2.http.GET
 import retrofit2.http.Path
 

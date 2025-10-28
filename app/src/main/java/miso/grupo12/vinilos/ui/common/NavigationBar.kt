@@ -18,8 +18,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
 import miso.grupo12.vinilos.ui.screens.albums.AlbumsScreen
-import miso.grupo12.vinilos.ui.screens.ArtistsScreen
-import miso.grupo12.vinilos.ui.screens.SongsScreen
+import miso.grupo12.vinilos.ui.screens.artists.ArtistsScreen
+import miso.grupo12.vinilos.ui.screens.songs.SongsScreen
 
 enum class AppDestinations(
     val label: String,
