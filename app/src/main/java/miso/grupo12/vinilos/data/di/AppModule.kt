@@ -1,4 +1,4 @@
-package miso.grupo12.vinilos.di
+package miso.grupo12.vinilos.data.di
 
 import dagger.Module
 import dagger.Provides

@@ -58,12 +58,8 @@ class AlbumViewModel @Inject constructor(
                     // Se actualiza el StateFlow del ViewModel con el valor más reciente de Room
                     _selectedAlbum.value = albumComplete
                 }
-            // Si quieres forzar una actualización de la red, la harías aquí:
             // repository.fetchAndSaveAlbum(id)
         }
     }
 
-    // NOTA: No necesitamos una función loadAlbums() separada,
-    // ya que la colección se inicia automáticamente en la definición de 'albums'
-    // y el Repositorio llama a refreshAlbums() en su onStart.
 }

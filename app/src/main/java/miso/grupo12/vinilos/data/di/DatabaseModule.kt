@@ -1,4 +1,4 @@
-package miso.grupo12.vinilos.di
+package miso.grupo12.vinilos.data.di
 
 import android.content.Context
 import androidx.room.Room
